@@ -54,9 +54,9 @@ class ViewController: UIViewController {
     }
     
     func restartQuizzler() {
+        currentScore = 0
         currentQuestionNumber = 0
         questionLabel.text = quiz[currentQuestionNumber][0]
-        currentScore = 0
     }
     
 }
