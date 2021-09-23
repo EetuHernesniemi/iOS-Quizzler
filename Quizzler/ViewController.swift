@@ -40,12 +40,14 @@ class ViewController: UIViewController {
     }
     
     func loadNextQuestion() {
-        currentQuestionNumber += 1
-        if currentQuestionNumber < quiz.count {
+        if currentQuestionNumber < (quiz.count - 1) {
+            currentQuestionNumber += 1
             questionLabel.text = quiz[currentQuestionNumber][0]
         } else {
-            currentQuestionNumber -= 1 //revert the previous currentQuestionNumber increment.
             finishQuizzler()
+            currentQuestionNumber = 0
+            questionLabel.text = quiz[currentQuestionNumber][0]
+            currentScore = 0
         }
     }
     
