@@ -45,14 +45,18 @@ class ViewController: UIViewController {
             questionLabel.text = quiz[currentQuestionNumber][0]
         } else {
             finishQuizzler()
-            currentQuestionNumber = 0
-            questionLabel.text = quiz[currentQuestionNumber][0]
-            currentScore = 0
         }
     }
     
     func finishQuizzler() {
         print("Your final score is \(currentScore)")
+        restartQuizzler()
+    }
+    
+    func restartQuizzler() {
+        currentQuestionNumber = 0
+        questionLabel.text = quiz[currentQuestionNumber][0]
+        currentScore = 0
     }
     
 }
