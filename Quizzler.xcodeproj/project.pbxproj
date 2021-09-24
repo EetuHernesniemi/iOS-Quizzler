@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3CAA6C9726FC958200528C1A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAA6C9626FC958200528C1A /* Question.swift */; };
+		3CAA6C9C26FDBF1100528C1A /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAA6C9B26FDBF1100528C1A /* QuizBrain.swift */; };
 		3CF74EE526FC5361007591A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF74EE426FC5361007591A4 /* AppDelegate.swift */; };
 		3CF74EE726FC5361007591A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF74EE626FC5361007591A4 /* SceneDelegate.swift */; };
 		3CF74EE926FC5361007591A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF74EE826FC5361007591A4 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		3CAA6C9626FC958200528C1A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		3CAA6C9B26FDBF1100528C1A /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		3CF74EE126FC5361007591A4 /* Quizzler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF74EE426FC5361007591A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF74EE626FC5361007591A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				3CAA6C9626FC958200528C1A /* Question.swift */,
+				3CAA6C9B26FDBF1100528C1A /* QuizBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAA6C9C26FDBF1100528C1A /* QuizBrain.swift in Sources */,
 				3CF74EE926FC5361007591A4 /* ViewController.swift in Sources */,
 				3CAA6C9726FC958200528C1A /* Question.swift in Sources */,
 				3CF74EE526FC5361007591A4 /* AppDelegate.swift in Sources */,
