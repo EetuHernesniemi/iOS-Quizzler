@@ -73,7 +73,7 @@ class ViewController: UIViewController {
     }
     
     func callLoadNextQuestionWithDelay(){
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) {
             timer in
             self.loadNextQuestion()
         }
