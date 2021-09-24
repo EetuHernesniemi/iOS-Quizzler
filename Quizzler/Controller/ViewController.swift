@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var falseButton: UIButton!
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
             print("Correct!")
             sender.backgroundColor = UIColor.green
             quizBrain.currentUserScore += 1
+            scoreLabel.text = quizBrain.getUserScoreText()
+            
         } else {
             print("Incorrect!")
             sender.backgroundColor = UIColor.red
@@ -53,6 +56,7 @@ class ViewController: UIViewController {
     func restartQuizzler() {
         quizBrain.currentUserScore = 0
         quizBrain.currentQuestionNumber = 0
+        scoreLabel.text = quizBrain.getUserScoreText()
         questionLabel.text = quizBrain.getQuestionText()
         progressBar.progress = quizBrain.getProgressBarProgress()
     }
