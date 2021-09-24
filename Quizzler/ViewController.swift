@@ -87,7 +87,13 @@ class ViewController: UIViewController {
     }
     
     func updateProgressBar(){
-        progressBar.progress = Float(currentQuestionNumber) / Float(quiz.count)
+        let divideByVal : Float = (Float(quiz.count) - 1.0)
+        if divideByVal > 0 {
+            progressBar.progress = Float(currentQuestionNumber) / divideByVal
+        } else {
+            progressBar.progress = 0
+        }
+        
     }
     
 }
