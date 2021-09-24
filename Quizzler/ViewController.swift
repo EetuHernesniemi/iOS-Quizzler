@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var falseButton: UIButton!
     @IBOutlet weak var trueButton: UIButton!
+    var timer = Timer()
     
     let quiz = [
         Question(text: "A slug's blood is green.", answer: "True"),
@@ -41,14 +42,18 @@ class ViewController: UIViewController {
         let actualAnswer : String = quiz[currentQuestionNumber].answer
         if userAnswer == actualAnswer {
             print("Correct!")
+            sender.backgroundColor = UIColor.green
             currentScore += 1
         } else {
             print("Incorrect!")
+            sender.backgroundColor = UIColor.red
         }
-        loadNextQuestion()
+        callLoadNextQuestionWithDelay()
     }
     
     func loadNextQuestion() {
+        timer.invalidate()
+        clearColorOfButtons()
         if currentQuestionNumber < (quiz.count - 1) {
             currentQuestionNumber += 1
             questionLabel.text = quiz[currentQuestionNumber].text
@@ -66,6 +71,18 @@ class ViewController: UIViewController {
         currentScore = 0
         currentQuestionNumber = 0
         questionLabel.text = quiz[currentQuestionNumber].text
+    }
+    
+    func callLoadNextQuestionWithDelay(){
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+            timer in
+            self.loadNextQuestion()
+        }
+    }
+    
+    func clearColorOfButtons() {
+        trueButton.backgroundColor = UIColor.clear
+        falseButton.backgroundColor = UIColor.clear
     }
     
 }
