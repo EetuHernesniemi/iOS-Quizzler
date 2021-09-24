@@ -52,7 +52,6 @@ class ViewController: UIViewController {
     }
     
     func loadNextQuestion() {
-        timer.invalidate()
         clearColorOfButtons()
         if currentQuestionNumber < (quiz.count - 1) {
             currentQuestionNumber += 1
@@ -74,7 +73,7 @@ class ViewController: UIViewController {
     }
     
     func callLoadNextQuestionWithDelay(){
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) {
             timer in
             self.loadNextQuestion()
         }
